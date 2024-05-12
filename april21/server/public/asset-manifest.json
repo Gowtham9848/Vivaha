@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0eeb7804.css",
+    "main.js": "/static/js/main.091e306e.js",
+    "static/media/venues.jpeg": "/static/media/venues.f35f00a312aeb02c7e67.jpeg",
+    "static/media/pandits.jpeg": "/static/media/pandits.e6ca1e7f5a1ee8f48b8b.jpeg",
+    "static/media/photographers.webp": "/static/media/photographers.88f02e8b03b677df12bb.webp",
+    "static/media/musicians-dancers.jpg": "/static/media/musicians-dancers.59fb89b76208e3d444a6.jpg",
+    "static/media/showImage2.jpg": "/static/media/showImage2.cad8f180ca212a95d7af.jpg",
+    "static/media/decorators.jpg": "/static/media/decorators.24bccde791636f09961b.jpg",
+    "static/media/showImage1.jpg": "/static/media/showImage1.abb063aab979e6d0bb4e.jpg",
+    "static/media/Vivahaa_backgroundImage.jpg": "/static/media/Vivahaa_backgroundImage.9ddd4658f7a74eafae80.jpg",
+    "static/media/venue-image.jpg": "/static/media/venue-image.567237557a29f8717552.jpg",
+    "static/media/mehendiArtists.jpg": "/static/media/mehendiArtists.13f385ce66a40243684d.jpg",
+    "static/media/food-catering.jpeg": "/static/media/food-catering.939d7f67a87d98551d47.jpeg",
+    "static/media/photographers.jpg": "/static/media/photographers.7261c9567b0af5e1fb81.jpg",
+    "static/media/mehendi-artists.jpg": "/static/media/mehendi-artists.313cd190f04bd62987e6.jpg",
+    "static/media/diy-assistance.jpg": "/static/media/diy-assistance.525da23a5ef90d8f3a08.jpg",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.0eeb7804.css.map": "/static/css/main.0eeb7804.css.map",
+    "main.091e306e.js.map": "/static/js/main.091e306e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0eeb7804.css",
+    "static/js/main.091e306e.js"
+  ]
+}

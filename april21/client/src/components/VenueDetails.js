@@ -295,7 +295,8 @@ const VenueDetails = () => {
           <CardMedia
             component="img"
             height="300"
-            image={`http://localhost:3500/uploads/images/${venue.image}`}
+            // image={`http://localhost:3500/uploads/images/${venue.image}`}
+            image={`/uploads/images/${venue.image}`}
             alt={venue.businessName}
             onClick={() => handleImageClick(imageIndex)} // Add click event handler to open modal
           />
@@ -382,7 +383,8 @@ const VenueDetails = () => {
           {images.slice(0, viewMore ? images.length : 3).map((image, index) => (
             <img
               key={index}
-              src={`http://localhost:3500/uploads/images/${image}`}
+              // src={`http://localhost:3500/uploads/images/${image}`}
+              src={`/uploads/images/${image}`}
               alt={`Image ${index + 1}`}
               onClick={() => handleImageClick(index)} // Add click event handler
             />
@@ -527,7 +529,8 @@ const VenueDetails = () => {
       <Dialog open={openModal} onClose={handleCloseModal} maxWidth="md">
         <DialogContent>
           <img
-            src={`http://localhost:3500/uploads/images/${images[imageIndex]}`}
+            // src={`http://localhost:3500/uploads/images/${images[imageIndex]}`}
+            src={`/uploads/images/${images[imageIndex]}`}
             alt={`Zoomed-in Image`}
             style={{ width: "100%", height: "auto" }}
           />

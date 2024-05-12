@@ -202,7 +202,8 @@ const ImageSlider = () => {
 
   const fetchBudgetData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3500/api/budget/${userLoggedIn}`);
+      // const response = await axios.get(`http://localhost:3500/api/budget/${userLoggedIn}`);
+      const response = await axios.get(`/api/budget/${userLoggedIn}`);
       const { budget, totalCost, totalPaid, items, eventDate_ } = response.data;
       setBudget(budget);
       setTotalCost(totalCost);
@@ -215,7 +216,8 @@ const ImageSlider = () => {
   const fetchChecklistItems = async () => {
     try {
       // Fetch checklist items from the server
-      const response = await axios.get(`http://localhost:3500/api/tasksforhomepage/${userLoggedIn}`);
+      // const response = await axios.get(`http://localhost:3500/api/tasksforhomepage/${userLoggedIn}`);
+      const response = await axios.get(`/api/tasksforhomepage/${userLoggedIn}`);
       debugger;
       setChecklistItems(response.data);
     } catch (error) {

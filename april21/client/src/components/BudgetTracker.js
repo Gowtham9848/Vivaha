@@ -68,7 +68,8 @@ const BudgetTracker = () => {
   const fetchBudgetData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3500/api/budget/${userLoggedIn}`
+        // `http://localhost:3500/api/budget/${userLoggedIn}`
+        `/api/budget/${userLoggedIn}`
       );
       const { budget, totalCost, totalPaid, items, eventDate_ } = response.data;
       setBudget(budget);
@@ -85,7 +86,8 @@ const BudgetTracker = () => {
 
   const saveBudgetData = async () => {
     try {
-      await axios.post("http://localhost:3500/api/budget", {
+      // await axios.post("http://localhost:3500/api/budget", {
+      await axios.post("/api/budget", {
         budget,
         totalCost,
         totalPaid,

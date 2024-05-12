@@ -8,7 +8,8 @@ const NotificationsPage = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await axios.get(`http://localhost:3500/api/notifications/${vendorLoggedIn}`);
+        // const response = await axios.get(`http://localhost:3500/api/notifications/${vendorLoggedIn}`);
+        const response = await axios.get(`/api/notifications/${vendorLoggedIn}`);
         setNotifications(response.data);
         console.log(response.data)
       } catch (error) {

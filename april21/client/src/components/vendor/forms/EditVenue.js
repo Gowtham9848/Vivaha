@@ -318,7 +318,8 @@ const EditVenue = () => {
             <Grid item xs={6} sm={4} md={3} key={index}>
               <Box sx={{ position: "relative" }}>
                 <img
-                  src={image.name?URL.createObjectURL(image):`http://localhost:3500/uploads/images/${image}`}
+                  // src={image.name?URL.createObjectURL(image):`http://localhost:3500/uploads/images/${image}`}
+                  src={image.name?URL.createObjectURL(image):`/uploads/images/${image}`}
                   alt={`Previous Work ${index + 1}`}
                   style={{ width: "100%", height: "auto" }}
                 />

@@ -171,7 +171,8 @@ const App = () => {
                 }
     
                 // Send tasks to the backend
-                await axios.post('http://localhost:3500/api/savealltasks', { tasks: tasksToSave });
+                // await axios.post('http://localhost:3500/api/savealltasks', { tasks: tasksToSave });
+                await axios.post('/api/savealltasks', { tasks: tasksToSave });
                 console.log('Hardcoded tasks saved to the backend successfully');
             } catch (error) {
                 console.error('Error saving hardcoded tasks:', error);
@@ -190,7 +191,8 @@ const App = () => {
 
     const fetchTasks = async () => {
         try {
-            const response = await axios.get(`http://localhost:3500/api/tasks/${userLoggedIn}`);
+            // const response = await axios.get(`http://localhost:3500/api/tasks/${userLoggedIn}`);
+            const response = await axios.get(`/api/tasks/${userLoggedIn}`);
             const fetchedTasks = response.data;
             debugger;
             // Merge fetched tasks with hardcoded tasks
@@ -241,7 +243,8 @@ const App = () => {
                 setTasks(updatedTasks);
             } else {
                 // Save the new task to the backend
-                const savedData = await axios.post(`http://localhost:3500/api/savetask/${userLoggedIn}`, newTask);
+                // const savedData = await axios.post(`http://localhost:3500/api/savetask/${userLoggedIn}`, newTask);
+                const savedData = await axios.post(`/api/savetask/${userLoggedIn}`, newTask);
                 const savedTask = savedData.data;
     
                 // Update the tasks state only if the task is successfully saved to the backend
@@ -288,7 +291,8 @@ const App = () => {
                 category: category.category,
                 tasks: Object.values(category.tasks)
               }));
-            await axios.post('http://localhost:3500/api/tasks', { taskArray });
+            // await axios.post('http://localhost:3500/api/tasks', { taskArray });
+            await axios.post('/api/tasks', { taskArray });
             console.log('Tasks saved successfully');
             enqueueSnackbar("Progress saved successfully", {
                 variant: "success",
@@ -315,7 +319,8 @@ const App = () => {
     const handleTaskDelete = async (taskId) => {
         // Filter out the task to be deleted
         try{
-        await axios.delete(`http://localhost:3500/api/deletetask/${taskId}`)
+        // await axios.delete(`http://localhost:3500/api/deletetask/${taskId}`)
+        await axios.delete(`/api/deletetask/${taskId}`)
         const updatedTasks = tasks.map(category => ({
             ...category,
             tasks: category.tasks.filter(t => t._id !== taskId)

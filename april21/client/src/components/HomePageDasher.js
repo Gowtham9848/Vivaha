@@ -80,7 +80,8 @@ const createGridItems = (gridItemsList) => {
           <CardMedia
             component="img"
             height="140"
-            image={`http://localhost:3500/uploads/images/${item.image}`}
+            // image={`http://localhost:3500/uploads/images/${item.image}`}
+            image={`/uploads/images/${item.image}`}
             alt={item.businessName}
           />
         </CardActionArea>
@@ -115,7 +116,8 @@ const createGridItems_Mehendi = (gridItemsList) => {
           <CardMedia
             component="img"
             height="140"
-            image={`http://localhost:3500/uploads/images/${item.image}`}
+            // image={`http://localhost:3500/uploads/images/${item.image}`}
+            image={`/uploads/images/${item.image}`}
             alt={item.businessName}
           />
         </CardActionArea>
@@ -150,7 +152,8 @@ const createGridItems_Decorator = (gridItemsList) => {
           <CardMedia
             component="img"
             height="140"
-            image={`http://localhost:3500/uploads/images/${item.image}`}
+            // image={`http://localhost:3500/uploads/images/${item.image}`}
+            image={`/uploads/images/${item.image}`}
             alt={item.businessName}
           />
         </CardActionArea>
@@ -188,7 +191,8 @@ const createGridItems_Photographer = (gridItemsList, handleMenuOpen) => {
           <CardMedia
             component="img"
             height="140"
-            image={`http://localhost:3500/uploads/images/${item.image}`}
+            // image={`http://localhost:3500/uploads/images/${item.image}`}
+            image={`/uploads/images/${item.image}`}
             alt={item.businessName}
           />
 

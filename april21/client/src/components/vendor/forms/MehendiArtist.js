@@ -83,7 +83,8 @@ const MehendiArtist = () => {
         formData_.append('image', data.image[0]);
                 //const response = await VenuesService.uploadVenueImage( axiosPrivate, data.image[0]);
                 console.log(data.image[0])
-                fetch('http://localhost:3500/upload', {
+                // fetch('http://localhost:3500/upload', {
+                fetch('/upload', {
                   method: 'POST',
                   body: formData_,
                   headers: {

@@ -25,8 +25,10 @@ const ReplyPage = () => {
   useEffect(() => {
     const fetchReplies = async () => {
       try {debugger
-        const vendorResponse = await axios.get(`http://localhost:3500/api/booking/${id.id}`);
-        const userResponse = await axios.get(`http://localhost:3500/api/user/booking/${id.id}`);
+        // const vendorResponse = await axios.get(`http://localhost:3500/api/booking/${id.id}`);
+        const vendorResponse = await axios.get(`/api/booking/${id.id}`);
+        // const userResponse = await axios.get(`http://localhost:3500/api/user/booking/${id.id}`);
+        const userResponse = await axios.get(`/api/user/booking/${id.id}`);
         const vendorReplies_ = vendorResponse.data.vendorReplies
         const userReplies_ = userResponse.data.userReplies;
         setVendorReplies(vendorReplies_);

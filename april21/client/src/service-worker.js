@@ -1,6 +1,8 @@
 // In your service worker file (e.g., service-worker.js)
 
-self.addEventListener('fetch', event => {
+/* eslint-disable no-restricted-globals */
+
+self.__WB_MANIFEST.addEventListener('fetch', event => {
   if (event.request.url.includes('/static/media')) {
     event.respondWith(
       caches.match(event.request).then(response => {

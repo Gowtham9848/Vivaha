@@ -231,7 +231,8 @@ const EditMehendiArtist = () => {
                   src={
                     image.name
                       ? URL.createObjectURL(image)
-                      : `http://localhost:3500/uploads/images/${image}`
+                      // : `http://localhost:3500/uploads/images/${image}`
+                      : `/uploads/images/${image}`
                   }
                   alt={`Previous Work ${index + 1}`}
                   style={{ width: "100%", height: "auto" }}

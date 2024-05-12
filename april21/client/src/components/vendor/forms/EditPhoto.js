@@ -107,7 +107,8 @@ const EditPhoto = () => {
       // Send updated photo data to the backend
       //const response = await axios.put(`/api/photo/${id}`, formData);
       //await axios.post(`/api/photo/${id}`,formData);
-      await fetch(`http://localhost:3500/api/photo/${id}`, {
+      // await fetch(`http://localhost:3500/api/photo/${id}`, {
+      await fetch(`/api/photo/${id}`, {
         method: 'POST',
         body: formData
       })
@@ -250,7 +251,8 @@ const EditPhoto = () => {
                 src={
                   image.name
                     ? URL.createObjectURL(image)
-                    : `http://localhost:3500/uploads/images/${image}`
+                    // : `http://localhost:3500/uploads/images/${image}`
+                    : `/uploads/images/${image}`
                 }
                 alt={`Previous Work ${index + 1}`}
                 style={{ width: "100%", height: "auto" }}

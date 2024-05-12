@@ -39,7 +39,8 @@ const GuestList = () => {
   useEffect(() => {
     const fetchGuestData = async () => {
       try {
-        const response = await fetch(`http://localhost:3500/api/guests/${userId}/${weddingDate}`);
+        // const response = await fetch(`http://localhost:3500/api/guests/${userId}/${weddingDate}`);
+        const response = await fetch(`/api/guests/${userId}/${weddingDate}`);
         if (!response.ok) {
           throw new Error('Failed to fetch guest data');
         }
@@ -87,7 +88,8 @@ const GuestList = () => {
   const handleSaveData = async () => {
 
     try {
-      const response = await fetch('http://localhost:3500/api/guests', {
+      // const response = await fetch('http://localhost:3500/api/guests', {
+      const response = await fetch('/api/guests', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -132,7 +134,8 @@ const GuestList = () => {
   const handleSendEmail = async () => {
     try{
     await handleSaveData();
-    await axios.post('http://localhost:3500/api/sendemail');
+    // await axios.post('http://localhost:3500/api/sendemail');
+    await axios.post('/api/sendemail');
     console.log('Email sent to all recipients');
     enqueueSnackbar("Email sent to all recipients", {
       variant: "success",

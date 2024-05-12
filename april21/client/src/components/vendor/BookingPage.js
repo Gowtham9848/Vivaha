@@ -14,10 +14,12 @@ const BookingPage = () => {
         
         var response = '';
         if(role.includes(5151)){
-        response = await axios.get(`http://localhost:3500/api/bookings/${vendorLoggedIn}`);
+        // response = await axios.get(`http://localhost:3500/api/bookings/${vendorLoggedIn}`);
+        response = await axios.get(`/api/bookings/${vendorLoggedIn}`);
         }
         else{
-          response = await axios.get(`http://localhost:3500/api/user/bookings/${vendorLoggedIn}`);
+          // response = await axios.get(`http://localhost:3500/api/user/bookings/${vendorLoggedIn}`);
+          response = await axios.get(`/api/user/bookings/${vendorLoggedIn}`);
         }
         setBookings(response.data);
         counter++;
